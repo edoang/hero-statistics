@@ -17,8 +17,8 @@ public class HeroStatistics {
     @Funq
     public Uni<String> getHeroStatistics() {
         return inventoryClient.allHeroes()
-                .map(cars -> ("The Heroes statistics created at %s. " +
+                .map(heroes -> ("The Heroes statistics created at %s. " +
                         "Number of available heroes: %d")
-                        .formatted(Instant.now(), cars.size()));
+                        .formatted(Instant.now(), heroes.size()));
     }
 }
